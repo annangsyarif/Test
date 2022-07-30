@@ -65,4 +65,3 @@ if __name__ == "__main__":
   df = df.set_index("id")
   sql.createTable(warehouseConn, confFile.get("mysqlWarehouse.tableName"))
   df.to_sql(confFile.get("mysqlWarehouse.tableName"), con = warehouseConn, if_exists = 'replace')
-  
